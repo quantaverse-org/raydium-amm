@@ -694,7 +694,7 @@ impl Processor {
         let spl_token_program_id = token_program_info.key;
         check_assert_eq!(
             *ata_token_program_info.key,
-            spl_associated_token_account::id(),
+            spl_associated_token_account::program::id(),
             "spl_associated_token_account",
             AmmError::InvalidSplTokenProgram
         );

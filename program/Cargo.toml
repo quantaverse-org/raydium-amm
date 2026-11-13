@@ -22,12 +22,10 @@ name = "raydium_amm"
 crate-type = ["cdylib", "lib"]
 
 [dependencies]
-solana-program = "=3.0.0"
-solana-system-interface = { version = "=3.0.0", features = ["bincode"] }
-spl-token = { version = "9.0.0", features = ["no-entrypoint"] }
-spl-associated-token-account = { version = "8.0.0", features = [
-    "no-entrypoint",
-] }
+solana-program = "=4.1.0"
+solana-system-interface = { version = "=3.3.0", features = ["bincode"] }
+spl-token = { package = "spl-token-interface", version = "=3.0.0" }
+spl-associated-token-account = { package = "spl-associated-token-account-interface", version = "=2.0.0" }
 solana-security-txt = "1.1.1"
 serde_json = { version = "1.0.56" }
 serde = { version = "1.0", features = ["derive"] }
@@ -36,15 +34,15 @@ base64 = "0.13.0"
 arrayref = "0.3.6"
 arrform = { git = "https://github.com/raydium-io/arrform" }
 num-derive = "0.3"
-num-traits = "0.2.12"
-bytemuck = { version = "1.4.0" }
+num-traits = "0.2.19"
+bytemuck = { version = "1.20.0" }
 safe-transmute = "0.11.0"
 thiserror = "1.0.20"
 uint = "0.10.0"
 
 [dev-dependencies]
 bumpalo = { version = "3.4.0", features = ["collections"] }
-proptest = "1.6"
+proptest = "1"
 
 [profile.release]
 lto = "fat"

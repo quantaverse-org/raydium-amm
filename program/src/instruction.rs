@@ -696,7 +696,7 @@ pub fn initialize2(
     let accounts = vec![
         // spl & sys
         AccountMeta::new_readonly(spl_token::id(), false),
-        AccountMeta::new_readonly(spl_associated_token_account::id(), false),
+        AccountMeta::new_readonly(spl_associated_token_account::program::id(), false),
         AccountMeta::new_readonly(solana_system_interface::program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
         // amm
